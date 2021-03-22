@@ -9,5 +9,6 @@ namespace HostAPI.Domain.Models {
     class Game:AEntity
      { 
          string GameName {get;set;}
+
      }
 }
