@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HostAPI.Storing;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,8 @@ namespace HostAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddDbContext<HostContext>();
+            services.AddScoped<HostRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
