@@ -6,9 +6,9 @@ namespace HostAPI.Storing
 
 public class HostContext:DbContext
 {
-     DbSet<Host> Hosts{get;set;}
-     DbSet<Player> Players{get;set;}
-     DbSet<Game> Games{get;set;}
+     public DbSet<Host> Hosts{get;set;}
+     public DbSet<Player> Players{get;set;}
+     public DbSet<Game> Games{get;set;}
 
      HostContext(){}
 
@@ -20,9 +20,9 @@ public class HostContext:DbContext
         }
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        builder.Entity<Host>().HasKey(host => host.EntityId);
+        builder.Entity<Host>().HasKey(host => host.RoomCode);
         builder.Entity<Game>().HasKey(game => game.EntityId);
-        builder.Entity<Player>().HasKey(player => player.EntityId);
+        builder.Entity<Player>().HasKey(player => player.name);
     }
 } 
 

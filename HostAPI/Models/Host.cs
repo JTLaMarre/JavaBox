@@ -1,15 +1,22 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using HostAPI.Domain.Abstracts;
 
 namespace HostAPI.Domain.Models
 {
-    class Host : AEntity
+    public class Host 
     {
-        string RoomCode { get; set; }
+        [Key]
+        public string RoomCode {get; set;}
 
-        List<Player> Players { get; set; }
+        public List<Player> Players { get; set; }
 
-        Game game { get; set; }
+       public Game game { get; set; }
+
+       public Host(string roomCode)
+       {  
+           RoomCode = roomCode; 
+        }
     }
 }
