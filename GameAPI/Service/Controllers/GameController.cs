@@ -21,11 +21,25 @@ namespace GameAPI.Service.Controllers
         /// Get all user accounts available
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
+        [HttpGet("get")]
         [ProducesResponseType(typeof(IEnumerable<Game>), StatusCodes.Status200OK)]
         public async Task<IActionResult> Get()
         {
             return Ok(await _repo.Get<Game>());
+        }
+
+        /// <summary>
+        /// Get a user's account via email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        [HttpGet("get/{id}")]
+        [ProducesResponseType(typeof(Game), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> Get(long ID)
+        {
+            Game Game = await _repo.Get<Game>(ID);
+            return Ok(Game);
         }
     }
 }
