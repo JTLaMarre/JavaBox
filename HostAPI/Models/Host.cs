@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using HostAPI.Domain.Abstracts;
+
 
 namespace HostAPI.Domain.Models
 {
