@@ -50,5 +50,12 @@ namespace HostAPI.Client.Controllers
             _repo.Update();
             return Ok();
         }
+
+        [HttpDelete("/host/end/{RoomCode}")]
+        public IActionResult endGame(string RoomCode)
+        {
+            _repo.EndGame(RoomCode);
+            return Ok();
+        }
     }
 }
