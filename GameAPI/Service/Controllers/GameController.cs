@@ -41,8 +41,12 @@ namespace GameAPI.Service.Controllers
             return Ok(await _repo.Get<Game>(ID));
         }
 
-
-        [HttpDelete("{ID}")]
+        /// <summary>
+        /// Deletes a Game by ID
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Delete(long ID)
@@ -54,6 +58,11 @@ namespace GameAPI.Service.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Inserts a New Game
+        /// </summary>
+        /// <param name="Game"></param>
+        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status202Accepted)]
         public async Task<IActionResult> Post([FromBody] Game Game)
@@ -63,7 +72,12 @@ namespace GameAPI.Service.Controllers
 
             return Accepted(Game);
         }
-            
+        
+        /// <summary>
+        /// Updates an Existing Game
+        /// </summary>
+        /// <param name="Game"></param>
+        /// <returns></returns>
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status202Accepted)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
