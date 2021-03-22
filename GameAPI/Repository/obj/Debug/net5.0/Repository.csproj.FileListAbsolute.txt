@@ -1,0 +1,17 @@
+/home/isaiah/revature/JavaBox/GameAPI/Repository/obj/Debug/net5.0/Repository.csprojAssemblyReference.cache
+/home/isaiah/revature/JavaBox/GameAPI/Repository/obj/Debug/net5.0/Repository.GeneratedMSBuildEditorConfig.editorconfig
+/home/isaiah/revature/JavaBox/GameAPI/Repository/obj/Debug/net5.0/Repository.AssemblyInfoInputs.cache
+/home/isaiah/revature/JavaBox/GameAPI/Repository/obj/Debug/net5.0/Repository.AssemblyInfo.cs
+/home/isaiah/revature/JavaBox/GameAPI/Repository/obj/Debug/net5.0/Repository.csproj.CoreCompileInputs.cache
+/home/isaiah/revature/JavaBox/GameAPI/Repository/bin/Debug/net5.0/Repository.deps.json
+/home/isaiah/revature/JavaBox/GameAPI/Repository/bin/Debug/net5.0/Repository.dll
+/home/isaiah/revature/JavaBox/GameAPI/Repository/bin/Debug/net5.0/ref/Repository.dll
+/home/isaiah/revature/JavaBox/GameAPI/Repository/bin/Debug/net5.0/Repository.pdb
+/home/isaiah/revature/JavaBox/GameAPI/Repository/bin/Debug/net5.0/Domain.dll
+/home/isaiah/revature/JavaBox/GameAPI/Repository/bin/Debug/net5.0/Storage.dll
+/home/isaiah/revature/JavaBox/GameAPI/Repository/bin/Debug/net5.0/Domain.pdb
+/home/isaiah/revature/JavaBox/GameAPI/Repository/bin/Debug/net5.0/Storage.pdb
+/home/isaiah/revature/JavaBox/GameAPI/Repository/obj/Debug/net5.0/Repository.csproj.CopyComplete
+/home/isaiah/revature/JavaBox/GameAPI/Repository/obj/Debug/net5.0/Repository.dll
+/home/isaiah/revature/JavaBox/GameAPI/Repository/obj/Debug/net5.0/ref/Repository.dll
+/home/isaiah/revature/JavaBox/GameAPI/Repository/obj/Debug/net5.0/Repository.pdb

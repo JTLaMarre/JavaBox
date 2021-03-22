@@ -1,0 +1,12 @@
+/home/isaiah/revature/JavaBox/GameAPI/Domain/obj/Debug/net5.0/Domain.csprojAssemblyReference.cache
+/home/isaiah/revature/JavaBox/GameAPI/Domain/obj/Debug/net5.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/isaiah/revature/JavaBox/GameAPI/Domain/obj/Debug/net5.0/Domain.AssemblyInfoInputs.cache
+/home/isaiah/revature/JavaBox/GameAPI/Domain/obj/Debug/net5.0/Domain.AssemblyInfo.cs
+/home/isaiah/revature/JavaBox/GameAPI/Domain/obj/Debug/net5.0/Domain.csproj.CoreCompileInputs.cache
+/home/isaiah/revature/JavaBox/GameAPI/Domain/bin/Debug/net5.0/Domain.deps.json
+/home/isaiah/revature/JavaBox/GameAPI/Domain/bin/Debug/net5.0/Domain.dll
+/home/isaiah/revature/JavaBox/GameAPI/Domain/bin/Debug/net5.0/ref/Domain.dll
+/home/isaiah/revature/JavaBox/GameAPI/Domain/bin/Debug/net5.0/Domain.pdb
+/home/isaiah/revature/JavaBox/GameAPI/Domain/obj/Debug/net5.0/Domain.dll
+/home/isaiah/revature/JavaBox/GameAPI/Domain/obj/Debug/net5.0/ref/Domain.dll
+/home/isaiah/revature/JavaBox/GameAPI/Domain/obj/Debug/net5.0/Domain.pdb

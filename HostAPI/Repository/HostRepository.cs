@@ -51,8 +51,8 @@ namespace HostAPI.Storing
         {
             var Host = GetHost(RoomCode);
             var Players = GetPlayers(RoomCode);
-            _ctx.Hosts.Remove(Host);
             _ctx.Players.RemoveRange(Players);
+            _ctx.Hosts.Remove(Host);
             _ctx.SaveChanges();
         }
         public void Update()
