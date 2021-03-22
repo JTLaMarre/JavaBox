@@ -29,17 +29,49 @@ namespace GameAPI.Service.Controllers
         }
 
         /// <summary>
-        /// Get a user's account via email
+        /// Get a Game with ID
         /// </summary>
-        /// <param name="email"></param>
+        /// <param name="ID"></param>
         /// <returns></returns>
         [HttpGet("get/{id}")]
         [ProducesResponseType(typeof(Game), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Get(long ID)
         {
+            return Ok(await _repo.Get<Game>(ID));
+        }
+
+
+        [HttpDelete("{ID}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> Delete(long ID)
+        {
             Game Game = await _repo.Get<Game>(ID);
-            return Ok(Game);
+            await Task.Run(() =>_repo.Delete<Game>(Game.EntityId));
+            await Task.Run(() =>_repo.Save());
+
+            return Ok();
+        }
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        public async Task<IActionResult> Post([FromBody] Game Game)
+        {
+            await Task.Run(() => _repo.Insert<Game>(Game));
+            await Task.Run(() => _repo.Save());
+
+            return Accepted(Game);
+        }
+            
+        [HttpPut]
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> Put([FromBody] Game Game)
+        {
+            await Task.Run(()=>_repo.Update<Game>(Game));
+            await Task.Run(()=>_repo.Save());
+            return Accepted(Game);
         }
     }
 }
