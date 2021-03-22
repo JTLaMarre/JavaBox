@@ -1,4 +1,8 @@
+using System.Collections.Generic;
+using System.Linq;
 using GameAPI.Storage;
+using Microsoft.EntityFrameworkCore;
+
 namespace GameAPI.Repository
 {
     public class Repo
