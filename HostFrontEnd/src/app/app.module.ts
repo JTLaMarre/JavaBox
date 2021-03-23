@@ -9,6 +9,7 @@ import { PlayersDisplayComponent } from './components/players-display/players-di
 import { HostComponent } from './components/host/host.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { PlayerComponent } from './components/player/player.component';
+import { GameHostComponent } from './components/game-host/game-host.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PlayerComponent } from './components/player/player.component';
     PlayersDisplayComponent,
     HostComponent,
     LandingComponent,
-    PlayerComponent
+    PlayerComponent,
+    GameHostComponent
   ],
   imports: [
     BrowserModule,
