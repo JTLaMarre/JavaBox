@@ -36,6 +36,10 @@ namespace HostAPI.Storing
         {
            return  _ctx.Hosts.Include(host => host.game).FirstOrDefault( Host => Host.RoomCode == RoomCode);
         }
+        public Player GetPlayer(string name)
+        {
+           return  _ctx.Players.FirstOrDefault(player => player.name == name);
+        }
 
         public List<Player> GetPlayers(string RoomCode)
         {

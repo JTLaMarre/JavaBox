@@ -25,6 +25,17 @@ namespace HostAPI.Client.Controllers
            _repo.addPlayer(Hank);
            return Ok();
        }
+       [HttpGet("/player/{name}")]
+       public IActionResult getPlayer(string name)
+       {
+           return Ok(_repo.GetPlayer(name));
+       }
+       [HttpPut("/player/{name}/{score}")]
+       public IActionResult setScore(int score,string name)
+       {
+           _repo.setScore(score,name);
+           return Ok();
+       }
 
 
        
