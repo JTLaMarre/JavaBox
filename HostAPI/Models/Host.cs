@@ -14,6 +14,8 @@ namespace HostAPI.Domain.Models
 
        public Game game { get; set; }
 
+       
+
        public Host(string roomCode)
        {  
            RoomCode = roomCode; 

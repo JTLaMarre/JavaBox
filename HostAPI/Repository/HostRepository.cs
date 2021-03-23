@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using HostAPI.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace HostAPI.Storing
 {
@@ -25,7 +26,7 @@ namespace HostAPI.Storing
             _ctx.Players.Add(player);
             _ctx.SaveChanges();
         }
-        public void AddGame(Game game)
+        public void addGame(Game game)
         {
             _ctx.Games.Add(game);
             _ctx.SaveChanges();
@@ -33,7 +34,11 @@ namespace HostAPI.Storing
 
         public Host GetHost(string RoomCode)
         {
-           return  _ctx.Hosts.FirstOrDefault( Host => Host.RoomCode == RoomCode);
+           return  _ctx.Hosts.Include(host => host.game).FirstOrDefault( Host => Host.RoomCode == RoomCode);
+        }
+        public Player GetPlayer(string name)
+        {
+           return  _ctx.Players.FirstOrDefault(player => player.name == name);
         }
 
         public List<Player> GetPlayers(string RoomCode)
@@ -54,6 +59,11 @@ namespace HostAPI.Storing
             _ctx.Players.RemoveRange(Players);
             _ctx.Hosts.Remove(Host);
             _ctx.SaveChanges();
+        }
+        public Game GetGame(string name)
+        {
+            var game = _ctx.Games.FirstOrDefault(g => g.GameName==name);
+            return game;
         }
         public void Update()
         {

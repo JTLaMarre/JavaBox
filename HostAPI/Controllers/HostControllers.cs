@@ -16,8 +16,6 @@ namespace HostAPI.Client.Controllers
            _repo=repo;
        }
 
-
-
         [HttpGet("/host/{RoomCode}")]
         public IActionResult getHost(string RoomCode)
         {
@@ -33,15 +31,14 @@ namespace HostAPI.Client.Controllers
         [HttpPost("/host/{RoomCode}/create")]
         public IActionResult createHost(string RoomCode)
         {
-            Host host = new Host(RoomCode);            
+            Host host = new Host(RoomCode);   
+            Game none = new Game();
+            none = _repo.GetGame("none");
+            host.game=none;                     
             _repo.addHost(host);
             return Ok();
         }
-        /// <summary>
-        /// Maybe we don't need
-        /// </summary>
-        /// <value></value>
-        // Maybe removed why are we keeping up with game in this api---------------------------------------------------------------------
+        
         [HttpPut("/host/{RoomCode}/{Game}")]
         public IActionResult pickGame(string RoomCode, string Game)
         {
@@ -51,11 +48,26 @@ namespace HostAPI.Client.Controllers
             return Ok();
         }
 
+        [HttpGet("/host/{RoomCode}/started")]
+        public IActionResult started(string RoomCode)
+        {
+            var host = _repo.GetHost(RoomCode);
+            if(host.game.EntityId==2)
+            {
+                return Ok(false);
+            }
+            else{
+                return Ok(true);
+            }
+        }
+
         [HttpDelete("/host/end/{RoomCode}")]
         public IActionResult endGame(string RoomCode)
         {
             _repo.EndGame(RoomCode);
             return Ok();
-        }
+        }       
+        
+        
     }
 }

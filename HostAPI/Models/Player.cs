@@ -10,6 +10,7 @@ namespace HostAPI.Domain.Models{
          public string name {get;set;}
 
          public int score {get;set;}
+        
 
          public string HostRoomcode{get;set;}
     }

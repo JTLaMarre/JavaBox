@@ -7,6 +7,9 @@ import { GameButtonComponent } from './components/game-button/game-button.compon
 import { RoomCodeDisplayComponent } from './components/room-code-display/room-code-display.component';
 import { PlayersDisplayComponent } from './components/players-display/players-display.component';
 import { HostComponent } from './components/host/host.component';
+import { LandingComponent } from './components/landing/landing.component';
+import { PlayerComponent } from './components/player/player.component';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +17,9 @@ import { HostComponent } from './components/host/host.component';
     GameButtonComponent,
     RoomCodeDisplayComponent,
     PlayersDisplayComponent,
-    HostComponent
+    HostComponent,
+    LandingComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
